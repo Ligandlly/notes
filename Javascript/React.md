@@ -465,3 +465,37 @@ this.props.history.push("/products");
 
 ### Nesting Router
 
+## Ch7 Form
+
+### 关联`label`和`input`
+
+*   在html里是`for`，在react里是`htmlFor`
+
+```react
+<form>
+    <label htmlFor="exampleInput">Label</label>
+    <input type="email" id="exampleInput" />
+</form>
+```
+
+<form>
+    <label for="exampleInput">Label</label>
+    <input type="email" id="exampleInput" />
+</form>
+
+### 表单提交行为
+
+```react
+handleSubmit = e => {
+  e.preventDefault();  
+    
+    
+};
+
+// in render
+<form onSubmit={this.handleSubmit}></form>
+```
+
+### Refs
+
+==在React中不应该直接使用`document`对象。==
